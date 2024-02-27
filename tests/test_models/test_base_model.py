@@ -7,7 +7,7 @@ from models.base_model import BaseModel
 
 
 class TestBaseModel(unittest.TestCase):
-    def testing_init(self):
+    def test_ing_init(self):
         """
         Test for __init__
         """
@@ -16,7 +16,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsNotNone(chaima.created_at)
         self.assertIsNotNone(chaima.updated_at)
 
-    def testing_save(self):
+    def test_ing_save(self):
         """
         Test for save
         """
@@ -25,7 +25,7 @@ class TestBaseModel(unittest.TestCase):
         cupat = chaima.save()
         self.assertNotEqual(upat, cupat)
 
-    def testing_to_dict(self):
+    def test_ing_to_dict(self):
         """
         Test for to_dict
         """
@@ -37,7 +37,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(mdict['created_at'], chaima.created_at.isoformat())
         self.assertEqual(mdict["updated_at"], chaima.created_at.isoformat())
 
-    def test_str(self):
+    def test_ing_str(self):
         """
         Test for string representation
         """
