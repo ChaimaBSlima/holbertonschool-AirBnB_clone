@@ -7,10 +7,6 @@ class BaseModel:
     """Represents the BaseModel """
     def __init__(self, *args, **kwargs):
         timeformat = "%Y-%m-%dT%H:%M:%S.%f"
-        self.id = str(uuid4)
-        self.created_at = datetime.utcnow()
-        self.updated_at = datetime.utcnow()
-
         if kwargs:
             for i, j in kwargs.items():
                 if i == "__class__":
@@ -19,6 +15,10 @@ class BaseModel:
                     setattr(self, i, datetime.strptime(j, timeformat))
                 else:
                     setattr(self, i, j)
+        else:
+            self.id = str(uuid4)
+            self.created_at = datetime.utcnow()
+            self.updated_at = datetime.utcnow()
 
     def save(self):
         """ updated_at take the current datetime."""
