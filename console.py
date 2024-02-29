@@ -21,7 +21,7 @@ class HBNBCommand(cmd.Cmd):
         """
         print the act of quit
         """
-        print("Quit command to exit the program\n")
+        print("Quit command to exit the program")
 
     def do_EOF(self, arg):
         """
@@ -29,6 +29,12 @@ class HBNBCommand(cmd.Cmd):
         """
         print()
         return True
+
+    def emptyline(self):
+        """
+        just print the prompt again.
+        """
+        pass
 
 
 if __name__ == '__main__':
