@@ -9,7 +9,7 @@ from models.amenity import Amenity
 from models.base_model import BaseModel
 
 
-class TestUser(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     """Unittests for Amenity."""
 
     def setUp(self):
@@ -35,13 +35,6 @@ class TestUser(unittest.TestCase):
         Amenity_str = str(test_Amenity)
         self.assertIn("Amenity", Amenity_str)
         self.assertIn("programming", Amenity_str)
-
-    def test_Amenity_to_dict(self):
-        test_Amenity = Amenity()
-        test_Amenity.name = "programming"
-        test_Amenity.save()
-        Amenity_dict = test_Amenity.to_dict()
-        self.assertEqual(Amenity_dict['name'], "programming")
 
     def test_Amenity_to_dict(self):
         test_Amenity = Amenity()
