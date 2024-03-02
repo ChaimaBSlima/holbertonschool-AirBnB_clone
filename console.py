@@ -5,6 +5,7 @@ Module for console
 import cmd
 import shlex
 from models.base_model import BaseModel
+from models.user import User
 from models import storage
 
 
@@ -13,7 +14,7 @@ class HBNBCommand(cmd.Cmd):
     control the command
     """
     prompt = "(hbnb)"
-    my_classes = ["BaseModel"]
+    my_classes = ["BaseModel", "User"]
 
     """ Task 6 functions"""
     def do_quit(self, arg):
@@ -52,8 +53,8 @@ class HBNBCommand(cmd.Cmd):
         elif commands[0] not in self.my_classes:
             print("** class doesn't exist **")
         else:
-            chaima = BaseModel()
-            chaima.save()
+            chaima = eval(f"{commands[0]}()")
+            storage.save()
             print(chaima.id)
 
     def do_show(self, arg):
