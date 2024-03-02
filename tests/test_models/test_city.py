@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for Amenity class
+Module for City class
 """
 import os
 import models
@@ -10,7 +10,7 @@ from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):
-    """Unittests for Amenity."""
+    """Unittests for City."""
 
     def setUp(self):
         self.test_file = "test_file.json"

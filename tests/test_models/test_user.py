@@ -43,17 +43,20 @@ class TestUser(unittest.TestCase):
         self.assertIn("chaima@example.com", user_str)
         self.assertIn("Chaima", user_str)
         self.assertIn("Ben Slima", user_str)
+        self.assertIn("password484", user_str)
 
     def test_user_to_dict(self):
         test_user = User()
         test_user.email = "chaima@example.com"
         test_user.first_name = "Chaima"
         test_user.last_name = "Ben Slima"
+        test_user.password = "password484"
         test_user.save()
         user_dict = test_user.to_dict()
         self.assertEqual(user_dict['email'], "chaima@example.com")
         self.assertEqual(user_dict['first_name'], "Chaima")
         self.assertEqual(user_dict['last_name'], "Ben Slima")
+        self.assertEqual(user_dict['password'], "password484")
 
     def test_user_instance_creation(self):
         test_user = User(email="chaima@example.com", password="password484",
