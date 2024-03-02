@@ -6,6 +6,11 @@ import cmd
 import shlex
 from models.base_model import BaseModel
 from models.user import User
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.city import City
 from models import storage
 
 
@@ -14,7 +19,8 @@ class HBNBCommand(cmd.Cmd):
     control the command
     """
     prompt = "(hbnb)"
-    my_classes = ["BaseModel", "User"]
+    my_classes = ["BaseModel", "User", "State", "City",
+                  "Amenity", "Place", "Review"]
 
     """ Task 6 functions"""
     def do_quit(self, arg):
