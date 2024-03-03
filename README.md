@@ -1,4 +1,4 @@
-<p align="center">An AirBnB clone.</p>
+<h1 align="center">AirBnB clone - The console</h1>
 
 # Description :house:
 
@@ -12,14 +12,14 @@ HolbertonBnB boasts an array of classes designed for diverse functionality:
 
 ||PUBLIC INSTANCE ATTRIBUTES|PUBLIC INSTANCE METHODS|PUBLIC CLASS ATTRIBUTES|PRIVATE CLASS ATTRIBUTES|
 |--------------------------|------------------------|----------------------|----------------------|------------------------|
-|**BaseModel**|`id`,`created_at`,`updated_at`|`save`,`to_dict`|||
-|**FileStorage**||`all`,`new`,`save`,`reload`|`file_path`,`objects`||
-|**User**|`email`,`password`,`first_name`,`last_name`||||
-|**State**|`name`||||
-|**City**|`state_id`,`name`||||
-|**Amenity**|`name`||||
-|**Place**|`city_id`,`user_id`,`name`,`description`,`number_rooms`,`number_bathrooms`,`max_guest`,`price_by_night`,`latitude`,`longitude`,`amenity_ids`||`place_id`,`user_id`,`text`||
-|**Review**|`place_id`,`user_id`,`text`||||
+|**BaseModel**|`id`<br>`created_at`<br>`updated_at`|`save`<br>`to_dict`|||
+|**FileStorage**||`all`<br>`new`<br>`save`<br>`reload`|| `file_path`<br>`objects`|
+|**User**|Inherits from `BaseModel`|""|`email`<br>`password`<br>`first_name`<br>`last_name`||
+|**State**|Inherits from `BaseModel`|""| `name`||
+|**City**|Inherits from `BaseModel`|""|`state_id`<br>`name`||
+|**Amenity**|Inherits from `BaseModel`|""|`name`||
+|**Place**|Inherits from `BaseModel`|""|`city_id`<br>`user_id`<br>`name`<br>`description`<br>`number_rooms`<br>`number_bathrooms`<br>`max_guest`<br>`price_by_night`<br>`latitude`<br>`longitude`<br>`amenity_ids`||
+|**Review**|Inherits from `BaseModel`|""|`place_id`<br>`user_id`<br>`text`||
 
 
 # Console :computer:
