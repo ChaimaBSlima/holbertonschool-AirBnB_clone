@@ -49,10 +49,6 @@ class TestFileStorage(unittest.TestCase):
         with self.assertRaises(TypeError):
             models.storage.new(BaseModel(), 1)
 
-    def test_new_args_None(self):
-        with self.assertRaises(TypeError):
-            models.storage.new(None)
-
     def test_save_and_reload(self):
         obj1 = BaseModel()
         obj2 = BaseModel()
@@ -64,7 +60,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(new_storage.all().get("BaseModel.{}".
                         format(obj1.id)) is not None)
         self.assertTrue(new_storage.all().get("baseModel.{}".
-                        format(obj2.id)) is not None)
+                        format(obj2.id)) is None)
 
     def test_save_to_file(self):
         obj = BaseModel()

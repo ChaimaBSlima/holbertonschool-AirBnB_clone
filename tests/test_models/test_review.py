@@ -52,7 +52,7 @@ class TestReview(unittest.TestCase):
         self.assertEqual(Review_dict['place_id'], "Sfax")
         self.assertEqual(Review_dict['user_id'], "Chaima")
         self.assertEqual(Review_dict['text'], "chaima is\
-                         a great ML Developper")
+ a great ML Developper")
 
     def test_Review_instance_creation(self):
         test_Review = Review(place_id="Sfax", user_id="Chaima",
@@ -68,7 +68,7 @@ class TestReview(unittest.TestCase):
         self.assertEqual(Review_dict['place_id'], "Sfax")
         self.assertEqual(Review_dict['user_id'], "Chaima")
         self.assertEqual(Review_dict['text'], "chaima is a\
-            great ML Developper")
+ great ML Developper")
 
     def test_Review_id(self):
         Review1 = Review()

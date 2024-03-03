@@ -35,7 +35,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(mdict["__class__"], 'BaseModel')
         self.assertEqual(mdict['id'], chaima.id)
         self.assertEqual(mdict['created_at'], chaima.created_at.isoformat())
-        self.assertEqual(mdict["updated_at"], chaima.created_at.isoformat())
+        self.assertEqual(mdict["updated_at"], chaima.updated_at.isoformat())
 
     def test_ing_str(self):
         """
