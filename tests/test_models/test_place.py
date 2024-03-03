@@ -39,33 +39,6 @@ class TestPlace(unittest.TestCase):
         test_Place = Place()
         self.assertTrue(issubclass(Place, BaseModel))
 
-    """def test_Place_representation(self):
-        test_Place = Place()
-        test_Place.city_id = "Sfax"
-        test_Place.user_id = "Chaima"
-        test_Place.name = " Chaima Hotel "
-        test_Place.description = " A five start halel hotel "
-        test_Place.number_rooms = 25
-        test_Place.number_bathrooms = 25
-        test_Place.max_guest = 50
-        test_Place.price_by_night = 120
-        test_Place.latitude = 10.5
-        test_Place.longitude = 15.25
-        test_Place.amenity_ids = ["Programming", "writing"]
-        self.assertIn("Sfax", str(test_Place.city_id))
-        self.assertIn("Chaima", str(test_Place.user_id))
-        self.assertIn(" Chaima Hotel ", str(test_Place.name))
-        self.assertIn(" A five start halel hotel ",
-                      str(test_Place.description))
-        self.assertIn(25, int(test_Place.number_rooms))
-        self.assertIn(25, int(test_Place.number_bathrooms))
-        self.assertIn(50, int(test_Place.max_guest))
-        self.assertIn(120, int(test_Place.price_by_night))
-        self.assertIn(10.5, float(test_Place.latitude))
-        self.assertIn(15.25, float(test_Place.longitude))
-        self.assertIn(["Programming", "writing"],
-                      list(test_Place.amenity_ids))"""
-
     def test_Place_to_dict(self):
         test_Place = Place()
         test_Place.city_id = "Sfax"
