@@ -1,12 +1,12 @@
 <h1 align="center">AirBnB clone - The console</h1>
 
-# Description : globe_with_meridians:
+# Description :globe_with_meridians:
 
 HolbertonBnB, a revolutionary web application, seamlessly blends database storage, a dynamic back-end API, and an intuitive front-end interface, creating a bespoke AirBnB clone.
 
 The current project implementation is focused on the robust development of the back-end console.
 
-# Classes :floppy_disk:
+# Classes :jigsaw:
 HolbertonBnB boasts an array of classes designed for diverse functionality:
 
 
@@ -44,7 +44,7 @@ $
 # Storage :floppy_disk:
 The abstracted storage engine is defined in the [FileStorage](./models/engine/file_storage.py) class. The `FileStorage` class handles the management of all classes mentioned above. Upon initialization, HolbertonBnB creates an instance of `FileStorage` named `storage`, which is loaded or reloaded from the `file.json` JSON file. As class instances are created, updated, or deleted, the `storage` object tracks and updates the corresponding changes in the `file.json`.
 
-# Commands:
+# Commands :open_file_folder:
 
 ### Create
 To create an object use format "create <ClassName>" 
