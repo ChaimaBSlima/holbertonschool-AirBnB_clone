@@ -36,7 +36,7 @@ class FileStorage:
         """
         Serializes __objects to a JSON file.
         """
-        objects = self.__objects
+        objects = FileStorage.__objects
         dic_data = {}
         for i in objects.keys():
             dic_data[i] = objects[i].to_dict()
@@ -58,3 +58,4 @@ class FileStorage:
                         FileStorage.__objects[key] = instance
                 except Exception:
                     pass
+
