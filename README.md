@@ -1,12 +1,12 @@
 <h1 align="center">AirBnB clone - The console</h1>
 
-# Description :house:
+# Description : globe_with_meridians:
 
 HolbertonBnB, a revolutionary web application, seamlessly blends database storage, a dynamic back-end API, and an intuitive front-end interface, creating a bespoke AirBnB clone.
 
 The current project implementation is focused on the robust development of the back-end console.
 
-# Classes :cl:
+# Classes :floppy_disk:
 HolbertonBnB boasts an array of classes designed for diverse functionality:
 
 
@@ -14,12 +14,12 @@ HolbertonBnB boasts an array of classes designed for diverse functionality:
 |--------------------------|------------------------|----------------------|----------------------|------------------------|
 |**BaseModel**|`id`<br>`created_at`<br>`updated_at`|`save`<br>`to_dict`|||
 |**FileStorage**||`all`<br>`new`<br>`save`<br>`reload`|| `file_path`<br>`objects`|
-|**User**|Inherits from `BaseModel`|""|`email`<br>`password`<br>`first_name`<br>`last_name`||
-|**State**|Inherits from `BaseModel`|""| `name`||
-|**City**|Inherits from `BaseModel`|""|`state_id`<br>`name`||
-|**Amenity**|Inherits from `BaseModel`|""|`name`||
-|**Place**|Inherits from `BaseModel`|""|`city_id`<br>`user_id`<br>`name`<br>`description`<br>`number_rooms`<br>`number_bathrooms`<br>`max_guest`<br>`price_by_night`<br>`latitude`<br>`longitude`<br>`amenity_ids`||
-|**Review**|Inherits from `BaseModel`|""|`place_id`<br>`user_id`<br>`text`||
+|**User**|Inherits from `BaseModel`||`email`<br>`password`<br>`first_name`<br>`last_name`||
+|**State**|Inherits from `BaseModel`|| `name`||
+|**City**|Inherits from `BaseModel`||`state_id`<br>`name`||
+|**Amenity**|Inherits from `BaseModel`||`name`||
+|**Place**|Inherits from `BaseModel`||`city_id`<br>`user_id`<br>`name`<br>`description`<br>`number_rooms`<br>`number_bathrooms`<br>`max_guest`<br>`price_by_night`<br>`latitude`<br>`longitude`<br>`amenity_ids`||
+|**Review**|Inherits from `BaseModel`||`place_id`<br>`user_id`<br>`text`||
 
 
 # Console :computer:
@@ -41,7 +41,7 @@ EOF  all  count  create  destroy  help  quit  show  update
 $
 ```
 
-# Storage :
+# Storage :floppy_disk:
 The abstracted storage engine is defined in the [FileStorage](./models/engine/file_storage.py) class. The `FileStorage` class handles the management of all classes mentioned above. Upon initialization, HolbertonBnB creates an instance of `FileStorage` named `storage`, which is loaded or reloaded from the `file.json` JSON file. As class instances are created, updated, or deleted, the `storage` object tracks and updates the corresponding changes in the `file.json`.
 
 # Commands:
@@ -84,7 +84,7 @@ help or help <command>
 	(hbnb) 
 ```
 
-# Authors
+# Authors :woman_technologist:
 
 - [@ChaimaBSlima](https://github.com/ChaimaBSlima)
 
